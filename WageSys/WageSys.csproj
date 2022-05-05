@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5AE6F515-469F-47A6-AC1B-BE41CFFE28CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WageSys</RootNamespace>
+    <AssemblyName>WageSys</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Bank.cs" />
+    <Compile Include="BL\Branch.cs" />
+    <Compile Include="BL\CurrencyInfo.cs" />
+    <Compile Include="BL\Employee.cs" />
+    <Compile Include="BL\EmployeeDegreee.cs" />
+    <Compile Include="BL\ToWord.cs" />
+    <Compile Include="Edit\deleteSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\deleteSalary.Designer.cs">
+      <DependentUpon>deleteSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditBank.Designer.cs">
+      <DependentUpon>EditBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditBranch.Designer.cs">
+      <DependentUpon>EditBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\Editdegree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\Editdegree.Designer.cs">
+      <DependentUpon>Editdegree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\AddBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\AddBank.Designer.cs">
+      <DependentUpon>AddBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Addbranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Addbranch.Designer.cs">
+      <DependentUpon>Addbranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Adddegree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Adddegree.Designer.cs">
+      <DependentUpon>Adddegree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Addemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Addemployee.Designer.cs">
+      <DependentUpon>Addemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\AddSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\AddSalary.Designer.cs">
+      <DependentUpon>AddSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BL\SalaryLog.cs" />
+    <Compile Include="Reports\analysis_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>analysis_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\analysis_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\analysis_view.Designer.cs">
+      <DependentUpon>analysis_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\bank_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bank_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\bank_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\bank_view.Designer.cs">
+      <DependentUpon>bank_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\employee_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\employee_view.Designer.cs">
+      <DependentUpon>employee_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\emp_certificate_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\emp_certificate_view.Designer.cs">
+      <DependentUpon>emp_certificate_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\emp_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>emp_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\jihad_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jihad_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\jihad_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\jihad_view.Designer.cs">
+      <DependentUpon>jihad_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\last_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\last_report.Designer.cs">
+      <DependentUpon>last_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\payroll_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>payroll_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\payroll_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\payroll_view.Designer.cs">
+      <DependentUpon>payroll_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\portfilo_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>portfilo_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\portfilo_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\portfilo_view.Designer.cs">
+      <DependentUpon>portfilo_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\salarycard_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>salarycard_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\salarycard_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\salarycard_view.Designer.cs">
+      <DependentUpon>salarycard_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Salarprofile_report.cs">
+      <DependentUpon>Salarprofile_report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Salaryprofile_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Salaryprofile_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\socailtax_view.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>socailtax_view.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\socialtax_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\socialtax_report.Designer.cs">
+      <DependentUpon>socialtax_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\solidaritytax_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>solidaritytax_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\solidaritytax_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\solidaritytax_view.Designer.cs">
+      <DependentUpon>solidaritytax_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\wandc_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wandc_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\wandc_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\wandc_view.Designer.cs">
+      <DependentUpon>wandc_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\ShowBanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll\ShowBanks.Designer.cs">
+      <DependentUpon>ShowBanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\ShowDegree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll\ShowDegree.Designer.cs">
+      <DependentUpon>ShowDegree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\ShowEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll\ShowEmployee.Designer.cs">
+      <DependentUpon>ShowEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll\ShowSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll\ShowSalary.Designer.cs">
+      <DependentUpon>ShowSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs" />
+    <EmbeddedResource Include="Edit\deleteSalary.resx">
+      <DependentUpon>deleteSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditBank.resx">
+      <DependentUpon>EditBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditBranch.resx">
+      <DependentUpon>EditBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\Editdegree.resx">
+      <DependentUpon>Editdegree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\AddBank.resx">
+      <DependentUpon>AddBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Addbranch.resx">
+      <DependentUpon>Addbranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Adddegree.resx">
+      <DependentUpon>Adddegree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Addemployee.resx">
+      <DependentUpon>Addemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\AddSalary.resx">
+      <DependentUpon>AddSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\analysis_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>analysis_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\analysis_view.resx">
+      <DependentUpon>analysis_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\bank_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>bank_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\bank_view.resx">
+      <DependentUpon>bank_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\employee_view.resx">
+      <DependentUpon>employee_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\emp_certificate_view.resx">
+      <DependentUpon>emp_certificate_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\emp_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>emp_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\jihad_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>jihad_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\jihad_view.resx">
+      <DependentUpon>jihad_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\last_report.resx">
+      <DependentUpon>last_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\payroll_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>payroll_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\payroll_view.resx">
+      <DependentUpon>payroll_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\portfilo_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>portfilo_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\portfilo_view.resx">
+      <DependentUpon>portfilo_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\salarycard_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>salarycard_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\salarycard_view.resx">
+      <DependentUpon>salarycard_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Salarprofile_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Salarprofile_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Salaryprofile_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Salaryprofile_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\socailtax_view.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>socailtax_view.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\socialtax_report.resx">
+      <DependentUpon>socialtax_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\solidaritytax_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>solidaritytax_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\solidaritytax_view.resx">
+      <DependentUpon>solidaritytax_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\wandc_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>wandc_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\wandc_view.resx">
+      <DependentUpon>wandc_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\ShowBanks.resx">
+      <DependentUpon>ShowBanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\ShowDegree.resx">
+      <DependentUpon>ShowDegree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\ShowEmployee.resx">
+      <DependentUpon>ShowEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll\ShowSalary.resx">
+      <DependentUpon>ShowSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121211284_1051469328606095_4183174324119298517_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
