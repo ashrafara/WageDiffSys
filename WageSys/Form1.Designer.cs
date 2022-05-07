@@ -211,22 +211,23 @@
             // صرفمرتبToolStripMenuItem
             // 
             this.صرفمرتبToolStripMenuItem.Name = "صرفمرتبToolStripMenuItem";
-            this.صرفمرتبToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.صرفمرتبToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.صرفمرتبToolStripMenuItem.Text = "صرف مرتب";
             this.صرفمرتبToolStripMenuItem.Click += new System.EventHandler(this.صرفمرتبToolStripMenuItem_Click);
             // 
             // تعديلمرتبToolStripMenuItem
             // 
             this.تعديلمرتبToolStripMenuItem.Name = "تعديلمرتبToolStripMenuItem";
-            this.تعديلمرتبToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.تعديلمرتبToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.تعديلمرتبToolStripMenuItem.Text = "تعديل مرتب";
             this.تعديلمرتبToolStripMenuItem.Click += new System.EventHandler(this.تعديلمرتبToolStripMenuItem_Click);
             // 
             // عرضالمرتباتToolStripMenuItem
             // 
             this.عرضالمرتباتToolStripMenuItem.Name = "عرضالمرتباتToolStripMenuItem";
-            this.عرضالمرتباتToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.عرضالمرتباتToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.عرضالمرتباتToolStripMenuItem.Text = "عرض المرتبات ";
+            this.عرضالمرتباتToolStripMenuItem.Click += new System.EventHandler(this.عرضالمرتباتToolStripMenuItem_Click);
             // 
             // التقاريرToolStripMenuItem
             // 
@@ -341,7 +342,7 @@
             this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

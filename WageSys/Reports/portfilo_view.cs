@@ -40,10 +40,10 @@ namespace WageSys.Reports
         {
             ReportDocument cryRpt = new ReportDocument();
             SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=WageSystem;User ID=sa;Password=ali123");
-            payroll_report rpt = new payroll_report();
+            Salaryprofile_report rpt = new Salaryprofile_report();
             rpt.SetDatabaseLogon("sa", "ali123", "localhost", "WageSystem");
-            rpt.SetParameterValue("month", textBox1.Text.ToString());
-            rpt.SetParameterValue("year", textBox2.Text.ToString());
+            rpt.SetParameterValue("salaryMonth", textBox1.Text.ToString());
+            rpt.SetParameterValue("salarayyear", textBox2.Text.ToString());
             rpt.SetParameterValue("bankId", comboBox1.SelectedValue);
             crystalReportViewer1.ReportSource = rpt;
 

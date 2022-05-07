@@ -122,15 +122,16 @@ namespace WageSys
 
         private void استمارةمرتبToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Reports.payroll_view frm = new Reports.payroll_view();
+            Reports.portfilo_view frm = new Reports.portfilo_view();
             frm.ShowDialog();
-
         }
 
         private void حافظةالمرتبToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Reports.portfilo_view frm = new Reports.portfilo_view();
+
+            Reports.payroll_view frm = new Reports.payroll_view();
             frm.ShowDialog();
+
         }
 
         private void شهادةمرتبلموظفToolStripMenuItem_Click(object sender, EventArgs e)
@@ -173,6 +174,12 @@ namespace WageSys
         {
             Reports.last_report frm = new Reports.last_report();
             frm.ShowDialog();
+        }
+
+        private void عرضالمرتباتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAll.ShowSalary db = new ShowAll.ShowSalary();
+            db.ShowDialog();
         }
     }
 }

@@ -16,14 +16,14 @@ namespace WageSys.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class payroll_report : ReportClass {
+    public class socailtaxes : ReportClass {
         
-        public payroll_report() {
+        public socailtaxes() {
         }
         
         public override string ResourceName {
             get {
-                return "payroll_report.rpt";
+                return "socailtaxes.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace WageSys.Reports {
         
         public override string FullResourceName {
             get {
-                return "WageSys.Reports.payroll_report.rpt";
+                return "WageSys.Reports.socailtaxes.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace WageSys.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_bankId {
+        public CrystalDecisions.Shared.IParameterField Parameter_salarayyear {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,25 +98,17 @@ namespace WageSys.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_salarayyear {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.Shared.IParameterField Parameter_salaryMonth {
             get {
-                return this.DataDefinition.ParameterFields[2];
+                return this.DataDefinition.ParameterFields[1];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedpayroll_report : Component, ICachedReport {
+    public class Cachedsocailtaxes : Component, ICachedReport {
         
-        public Cachedpayroll_report() {
+        public Cachedsocailtaxes() {
         }
         
         [Browsable(false)]
@@ -153,7 +145,7 @@ namespace WageSys.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            payroll_report rpt = new payroll_report();
+            socailtaxes rpt = new socailtaxes();
             rpt.Site = this.Site;
             return rpt;
         }

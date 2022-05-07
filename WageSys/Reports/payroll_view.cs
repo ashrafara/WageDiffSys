@@ -39,7 +39,7 @@ namespace WageSys.Reports
         {
             //ReportDocument cryRpt = new ReportDocument();
             //SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=WageSystem;User ID=sa;Password=ali123");
-            Salarprofile_report rpt = new Salarprofile_report();
+            payroll_report rpt = new payroll_report();
             rpt.SetDatabaseLogon("sa", "ali123", "localhost", "WageSystem");
             rpt.SetParameterValue("salaryMonth", textBox1.Text.ToString());
             rpt.SetParameterValue("salarayyear", textBox2.Text.ToString());

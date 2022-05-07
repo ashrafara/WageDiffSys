@@ -43,7 +43,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1037, 9);
+            this.button1.Location = new System.Drawing.Point(1017, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 28);
             this.button1.TabIndex = 12;
@@ -54,7 +54,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(966, 12);
+            this.textBox2.Location = new System.Drawing.Point(946, 10);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(65, 26);
             this.textBox2.TabIndex = 10;
@@ -62,7 +62,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(852, 13);
+            this.textBox1.Location = new System.Drawing.Point(832, 11);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(65, 26);
             this.textBox1.TabIndex = 11;
@@ -71,7 +71,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(923, 19);
+            this.label4.Location = new System.Drawing.Point(903, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 19);
             this.label4.TabIndex = 6;
@@ -81,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(816, 19);
+            this.label3.Location = new System.Drawing.Point(796, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 19);
             this.label3.TabIndex = 7;
@@ -91,7 +91,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(554, 16);
+            this.label2.Location = new System.Drawing.Point(535, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 19);
             this.label2.TabIndex = 8;
@@ -101,7 +101,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(226, 15);
+            this.label1.Location = new System.Drawing.Point(206, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 9;
@@ -111,7 +111,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(590, 13);
+            this.comboBox2.Location = new System.Drawing.Point(570, 11);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(216, 27);
             this.comboBox2.TabIndex = 4;
@@ -126,7 +126,7 @@
             "التجارة والتنمية",
             "السراي",
             "الوحدة"});
-            this.comboBox1.Location = new System.Drawing.Point(333, 10);
+            this.comboBox1.Location = new System.Drawing.Point(313, 8);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(216, 27);
             this.comboBox1.TabIndex = 5;
@@ -138,9 +138,9 @@
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.DisplayStatusBar = false;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(12, 42);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(12, 41);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1371, 695);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1238, 625);
             this.crystalReportViewer1.TabIndex = 13;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1396, 749);
+            this.ClientSize = new System.Drawing.Size(1262, 681);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);

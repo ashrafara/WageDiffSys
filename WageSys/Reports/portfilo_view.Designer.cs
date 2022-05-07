@@ -142,7 +142,7 @@
             this.crystalReportViewer1.DisplayStatusBar = false;
             this.crystalReportViewer1.Location = new System.Drawing.Point(12, 43);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1375, 685);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1207, 685);
             this.crystalReportViewer1.TabIndex = 13;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -151,7 +151,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1400, 740);
+            this.ClientSize = new System.Drawing.Size(1231, 740);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
