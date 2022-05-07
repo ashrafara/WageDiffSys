@@ -37,27 +37,27 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 44);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(725, 681);
+            this.dataGridView1.Size = new System.Drawing.Size(846, 464);
             this.dataGridView1.TabIndex = 5;
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(296, 12);
+            this.txt_search.Location = new System.Drawing.Point(345, 14);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(178, 21);
+            this.txt_search.Size = new System.Drawing.Size(207, 23);
             this.txt_search.TabIndex = 4;
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // ShowDegree
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 731);
+            this.ClientSize = new System.Drawing.Size(874, 522);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_search);
-            this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ShowDegree";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

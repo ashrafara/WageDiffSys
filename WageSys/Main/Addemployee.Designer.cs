@@ -451,7 +451,8 @@
             "المدير التنفيذي",
             "ادارة الشؤون القانونية والتسجيل",
             "إدارة الخطيط والمتابعة",
-            "إدارة الشؤون الادارية والمالية"});
+            "إدارة الشؤون الادارية والمالية",
+            "لا يوجد"});
             this.cbDepartement.Location = new System.Drawing.Point(161, 150);
             this.cbDepartement.Name = "cbDepartement";
             this.cbDepartement.Size = new System.Drawing.Size(246, 26);
@@ -472,7 +473,8 @@
             "قسم المتابعة المالية",
             "قسم شؤون الموظفين والتدريب",
             "قسم الشؤون المالية",
-            "قسم العلاقات العامة الخدمات"});
+            "قسم العلاقات العامة الخدمات",
+            "لا يوجد"});
             this.cbDivision.Location = new System.Drawing.Point(536, 152);
             this.cbDivision.Name = "cbDivision";
             this.cbDivision.Size = new System.Drawing.Size(221, 26);

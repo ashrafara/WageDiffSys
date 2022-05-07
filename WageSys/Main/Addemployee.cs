@@ -55,49 +55,38 @@ namespace WageSys.Main
             dynamic empType = comboBox1.SelectedItem;
             dynamic stt = comboBox2.SelectedItem;
             dynamic ms = comboBox3.SelectedItem;
-            dynamic bn = comboBox4.SelectedItem;
-            dynamic cdepar = cbDepartement.SelectedItem;
+            dynamic cdepar = cbDepartement.SelectedValue;
             dynamic cdivision = cbDivision.SelectedItem;
 
-            foreach (Control c in this.Controls)
-            {
-                if (txtemployeeName.Text == "" || txtNationality.Text == "" || txtemployeeNationalNumber.Text == "" || txtemployeeInsuranceNumber.Text == "" ||
-                    txtemployeeBankNumber.Text == "" || txtemployementName.Text== "" || txtchildno.Text== "")
-                {
-                    MessageBox.Show("الرجاء تعبئة الخانات الفارغة");
-                }
-                else
-                {
 
-                    var employ = new Employee
-                    {
-                        employeeName = string.IsNullOrEmpty(txtemployeeName.Text) ? "" : txtemployeeName.Text,
-                        employeeNationality = string.IsNullOrEmpty(txtNationality.Text) ? "" : txtNationality.Text,
-                        employeeNationalNo = string.IsNullOrEmpty(txtemployeeNationalNumber.Text) ? (decimal?)0 : Convert.ToDecimal(txtemployeeNationalNumber.Text),
-                        employeeInsuranceNo = string.IsNullOrEmpty(txtemployeeInsuranceNumber.Text) ? (decimal?)0 : Convert.ToDecimal(txtemployeeInsuranceNumber.Text),
-                        employeeBankNumber = string.IsNullOrEmpty(txtemployeeBankNumber.Text) ? "" : txtemployeeBankNumber.Text,
-                        employeeDepartement = cdepar,
-                        employeeDivision = cdivision,
-                        employementName = string.IsNullOrEmpty(txtemployementName.Text) ? "" : txtemployementName.Text,
-                        degreeId = degree,
-                        emlpoyeeBouns = bn,
-                        employeeState = empType,
-                        employeeSalary = stt,
-                        employeeStartDate = Convert.ToDateTime(dateTimePicker1.Text),
-                        bankId = mbank,
-                        branchId = bbank,
-                        employeeMartial = ms,
-                        childnum = string.IsNullOrEmpty(txtchildno.Text) ? (int?)0 : Convert.ToInt32(txtchildno.Text),
-                        employeeDegreeAssign = string.IsNullOrEmpty(txtdegreAssign.Text) ? (int?)0 : Convert.ToInt32(txtdegreAssign.Text),
-                        employeeBounsAssign = string.IsNullOrEmpty(txtbounsAssign.Text) ? (int?)0 : Convert.ToInt32(txtbounsAssign.Text)
-                    };
-                    db.Employees.Add(employ);
-                    db.SaveChanges();
-                    MessageBox.Show("تم الاضافة");
-                }
-            }
-            
-            ClearTextBoxes();
+                var employ = new Employee
+                {
+                    employeeName = string.IsNullOrEmpty(txtemployeeName.Text) ? "" : txtemployeeName.Text,
+                    employeeNationality = string.IsNullOrEmpty(txtNationality.Text) ? "" : txtNationality.Text,
+                    employeeNationalNo = string.IsNullOrEmpty(txtemployeeNationalNumber.Text) ? (decimal?)0 : Convert.ToDecimal(txtemployeeNationalNumber.Text),
+                    employeeInsuranceNo = string.IsNullOrEmpty(txtemployeeInsuranceNumber.Text) ? (decimal?)0 : Convert.ToDecimal(txtemployeeInsuranceNumber.Text),
+                    employeeBankNumber = string.IsNullOrEmpty(txtemployeeBankNumber.Text) ? "" : txtemployeeBankNumber.Text,
+                    employeeDepartement = cdepar,
+                    employeeDivision = cdivision,
+                    employementName = string.IsNullOrEmpty(txtemployementName.Text) ? "" : txtemployementName.Text,
+                    degreeId = degree,
+                    emlpoyeeBouns = int.Parse(comboBox4.SelectedItem.ToString()),
+                    employeeState = empType,
+                    employeeSalary = stt,
+                    employeeStartDate = Convert.ToDateTime(dateTimePicker1.Text),
+                    bankId = mbank,
+                    branchId = bbank,
+                    employeeMartial = ms,
+                    childnum = string.IsNullOrEmpty(txtchildno.Text) ? (int?)0 : Convert.ToInt32(txtchildno.Text),
+                    employeeDegreeAssign = string.IsNullOrEmpty(txtdegreAssign.Text) ? (int?)0 : Convert.ToInt32(txtdegreAssign.Text),
+                    employeeBounsAssign = string.IsNullOrEmpty(txtbounsAssign.Text) ? (int?)0 : Convert.ToInt32(txtbounsAssign.Text)
+                };
+                db.Employees.Add(employ);
+                db.SaveChanges();
+                MessageBox.Show("تم الاضافة");
+                ClearTextBoxes();
+      
+
         }
         private void ClearTextBoxes()
         {

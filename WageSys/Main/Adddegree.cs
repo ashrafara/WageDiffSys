@@ -40,7 +40,6 @@ namespace WageSys.Main
         private void ClearTextBoxes()
         {
             Action<Control.ControlCollection> func = null;
-
             func = (controls) =>
             {
                 foreach (Control control in controls)
@@ -49,7 +48,6 @@ namespace WageSys.Main
                     else
                         func(control.Controls);
             };
-
             func(Controls);
         }
 

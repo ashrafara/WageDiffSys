@@ -97,7 +97,6 @@ namespace WageSys.Edit
             dynamic empType = comboBox1.SelectedItem;
             dynamic stt = comboBox2.SelectedItem;
             dynamic ms = comboBox3.SelectedItem;
-            dynamic bn = comboBox4.SelectedItem;
             dynamic cdepar = cbDepartement.SelectedItem;
             dynamic cdivision = cbDivision.SelectedItem;
 
@@ -113,7 +112,7 @@ namespace WageSys.Edit
                 employeeDivision = cdivision,
                 employementName = string.IsNullOrEmpty(txtemployementName.Text) ? "" : txtemployementName.Text,
                 degreeId = degree,
-                emlpoyeeBouns = bn,
+                emlpoyeeBouns = int.Parse(comboBox4.SelectedItem.ToString()),
                 employeeState = empType,
                 employeeSalary = stt,
                 employeeStartDate = Convert.ToDateTime(dateTimePicker1.Text),
@@ -125,7 +124,7 @@ namespace WageSys.Edit
             };
             db.Employees.AddOrUpdate(employ);
             db.SaveChanges();
-            MessageBox.Show("تم الاضافة");
+            MessageBox.Show("تم التعديل");
 
         }
 
@@ -154,7 +153,6 @@ namespace WageSys.Edit
                 txtbounsAssign.Text = row.Cells[17].Value.ToString();
                 comboBox3.Text = row.Cells[18].Value.ToString();
                 txtchildno.Text= row.Cells[19].Value.ToString();
-
             }
         }
 
