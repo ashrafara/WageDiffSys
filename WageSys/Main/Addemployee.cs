@@ -18,6 +18,24 @@ namespace WageSys.Main
         {
             InitializeComponent();
 
+            try
+            {
+                List<Bank> cat = GetAllBank(0);
+                cat.Sort((x, y) => x.mainBank.CompareTo(y.mainBank));
+                cat.Sort((x, y) => x.branchBank.CompareTo(y.branchBank));
+                coBank.DataSource = cat;
+                coBank.ValueMember = "bankId";
+                coBank.DisplayMember = "mainBank";
+
+                coBankBranch.DataSource = cat;
+                coBankBranch.ValueMember = "bankId";
+                coBankBranch.DisplayMember = "branchBank";
+            }
+            catch
+            {
+
+            }
+
             var emplpy = (from c in db.EmployeeDegreees
                           select new { c.degreeNumber, c.degreeId }).Distinct().ToList();
             cbDegreee.DataSource = emplpy.ToList();
@@ -26,15 +44,15 @@ namespace WageSys.Main
 
 
 
-            var ban = (from c in db.Banks
-                       select new { c.mainBank, c.branchBank, c.bankId }).ToList();
-            coBank.DataSource = ban.Distinct().ToList();
-            coBank.DisplayMember = "mainBank";
-            coBank.ValueMember = "bankId";
+            //var ban = (from c in db.Banks
+            //           select new { c.mainBank, c.branchBank, c.bankId }).ToList();
+            //coBank.DataSource = ban.Distinct().ToList();
+            //coBank.DisplayMember = "mainBank";
+            //coBank.ValueMember = "bankId";
 
-            coBankBranch.DataSource = ban.Distinct().ToList();
-            coBankBranch.DisplayMember = "branchBank";
-            coBankBranch.ValueMember = "bankId";
+            //coBankBranch.DataSource = ban.Distinct().ToList();
+            //coBankBranch.DisplayMember = "branchBank";
+            //coBankBranch.ValueMember = "bankId";
         }
 
         private void Addemployee_Load(object sender, EventArgs e)
@@ -173,6 +191,16 @@ namespace WageSys.Main
             {
                 e.Handled = true;
             }
+        }
+
+        private static List<Bank> GetAllBank(int? bankLd)
+        {
+            List<Bank> _bank = null;
+            using (Model1 db = new Model1())
+            {
+                _bank = (from u in db.Banks where (bankLd == null) || (u.bankId == bankLd) || (bankLd == 0) select u).ToList();
+            }
+            return _bank;
         }
     }
 }

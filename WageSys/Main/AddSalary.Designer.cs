@@ -86,6 +86,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txthouseloan = new System.Windows.Forms.TextBox();
             this.txtpaycaruse = new System.Windows.Forms.TextBox();
             this.txtpastyears = new System.Windows.Forms.TextBox();
             this.txtallowancediff = new System.Windows.Forms.TextBox();
@@ -97,6 +98,7 @@
             this.txtunempGift = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -123,8 +125,6 @@
             this.cboCurrency = new System.Windows.Forms.ComboBox();
             this.txtArabicWord = new System.Windows.Forms.TextBox();
             this.txtcheque = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.txthouseloan = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -764,6 +764,7 @@
             this.groupBox4.Controls.Add(this.txtpaycaruse);
             this.groupBox4.Controls.Add(this.txtpastyears);
             this.groupBox4.Controls.Add(this.txtallowancediff);
+            this.groupBox4.Controls.Add(this.txtservicebox);
             this.groupBox4.Controls.Add(this.txtsancted);
             this.groupBox4.Controls.Add(this.txtinsurancetax);
             this.groupBox4.Controls.Add(this.txtloandiscount);
@@ -780,6 +781,7 @@
             this.groupBox4.Controls.Add(this.label38);
             this.groupBox4.Controls.Add(this.label37);
             this.groupBox4.Controls.Add(this.label28);
+            this.groupBox4.Controls.Add(this.label31);
             this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label7);
@@ -791,6 +793,14 @@
             this.groupBox4.TabIndex = 48;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "المدخلات";
+            // 
+            // txthouseloan
+            // 
+            this.txthouseloan.Location = new System.Drawing.Point(355, 222);
+            this.txthouseloan.Name = "txthouseloan";
+            this.txthouseloan.Size = new System.Drawing.Size(88, 27);
+            this.txthouseloan.TabIndex = 28;
+            this.txthouseloan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtpaycaruse
             // 
@@ -897,6 +907,17 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "بدل نقدي مقابل استعمال السيارة";
             // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Navy;
+            this.label42.Location = new System.Drawing.Point(458, 229);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(87, 19);
+            this.label42.TabIndex = 0;
+            this.label42.Text = "القرض السكني";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -981,7 +1002,6 @@
             this.groupBox3.Controls.Add(this.txttotalincometax);
             this.groupBox3.Controls.Add(this.txtincome5tax);
             this.groupBox3.Controls.Add(this.txtincometax);
-            this.groupBox3.Controls.Add(this.txtservicebox);
             this.groupBox3.Controls.Add(this.txtamountjihad);
             this.groupBox3.Controls.Add(this.txttotalsocailtax);
             this.groupBox3.Controls.Add(this.txtsalaryTreasurContribution);
@@ -998,7 +1018,6 @@
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.label31);
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label9);
@@ -1050,11 +1069,12 @@
             // txtservicebox
             // 
             this.txtservicebox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtservicebox.Location = new System.Drawing.Point(324, 183);
+            this.txtservicebox.Location = new System.Drawing.Point(355, 259);
             this.txtservicebox.Name = "txtservicebox";
-            this.txtservicebox.Size = new System.Drawing.Size(117, 27);
+            this.txtservicebox.Size = new System.Drawing.Size(88, 27);
             this.txtservicebox.TabIndex = 23;
             this.txtservicebox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtservicebox.TextChanged += new System.EventHandler(this.txtservicebox_TextChanged);
             // 
             // txtamountjihad
             // 
@@ -1129,7 +1149,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(443, 185);
+            this.label31.Location = new System.Drawing.Point(445, 261);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(104, 19);
             this.label31.TabIndex = 0;
@@ -1173,6 +1193,7 @@
             this.txtArabicWord.Name = "txtArabicWord";
             this.txtArabicWord.Size = new System.Drawing.Size(1081, 33);
             this.txtArabicWord.TabIndex = 54;
+            this.txtArabicWord.TextChanged += new System.EventHandler(this.txtArabicWord_TextChanged);
             // 
             // txtcheque
             // 
@@ -1181,25 +1202,6 @@
             this.txtcheque.Size = new System.Drawing.Size(100, 20);
             this.txtcheque.TabIndex = 56;
             this.txtcheque.Visible = false;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Navy;
-            this.label42.Location = new System.Drawing.Point(458, 233);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(87, 19);
-            this.label42.TabIndex = 0;
-            this.label42.Text = "القرض السكني";
-            // 
-            // txthouseloan
-            // 
-            this.txthouseloan.Location = new System.Drawing.Point(355, 226);
-            this.txthouseloan.Name = "txthouseloan";
-            this.txthouseloan.Size = new System.Drawing.Size(88, 27);
-            this.txthouseloan.TabIndex = 28;
-            this.txthouseloan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AddSalary
             // 

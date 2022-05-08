@@ -754,5 +754,15 @@ namespace WageSys.Main
         {
 
         }
+
+        private void txtArabicWord_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtservicebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
