@@ -56,12 +56,20 @@
             this.كشفالجهادToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.كشفالتضامنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.كشفمساهمةجهةالعملوالخزانةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.استمارةمرتبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.استمارةالمرتباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حسبالمصرفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حسبالشهرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حافظةالمرتبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.شهادةمرتبلموظفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.بطاقةمرتبلموظفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.بياناتالموظفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.بطاقةالدفعالاخيرةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تقاريرتجميعيةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.الكشفالتحليليToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.المصارفToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.الضمانالاجتماعيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.استمارةالمرتبالشهريةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حوفظةالمرتبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -211,21 +219,21 @@
             // صرفمرتبToolStripMenuItem
             // 
             this.صرفمرتبToolStripMenuItem.Name = "صرفمرتبToolStripMenuItem";
-            this.صرفمرتبToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.صرفمرتبToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.صرفمرتبToolStripMenuItem.Text = "صرف مرتب";
             this.صرفمرتبToolStripMenuItem.Click += new System.EventHandler(this.صرفمرتبToolStripMenuItem_Click);
             // 
             // تعديلمرتبToolStripMenuItem
             // 
             this.تعديلمرتبToolStripMenuItem.Name = "تعديلمرتبToolStripMenuItem";
-            this.تعديلمرتبToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.تعديلمرتبToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.تعديلمرتبToolStripMenuItem.Text = "تعديل مرتب";
             this.تعديلمرتبToolStripMenuItem.Click += new System.EventHandler(this.تعديلمرتبToolStripMenuItem_Click);
             // 
             // عرضالمرتباتToolStripMenuItem
             // 
             this.عرضالمرتباتToolStripMenuItem.Name = "عرضالمرتباتToolStripMenuItem";
-            this.عرضالمرتباتToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.عرضالمرتباتToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.عرضالمرتباتToolStripMenuItem.Text = "عرض المرتبات ";
             this.عرضالمرتباتToolStripMenuItem.Click += new System.EventHandler(this.عرضالمرتباتToolStripMenuItem_Click);
             // 
@@ -238,12 +246,13 @@
             this.كشفالجهادToolStripMenuItem,
             this.كشفالتضامنToolStripMenuItem,
             this.كشفمساهمةجهةالعملوالخزانةToolStripMenuItem,
-            this.استمارةمرتبToolStripMenuItem,
+            this.استمارةالمرتباتToolStripMenuItem,
             this.حافظةالمرتبToolStripMenuItem,
             this.شهادةمرتبلموظفToolStripMenuItem,
             this.بطاقةمرتبلموظفToolStripMenuItem,
             this.بياناتالموظفToolStripMenuItem,
-            this.بطاقةالدفعالاخيرةToolStripMenuItem});
+            this.بطاقةالدفعالاخيرةToolStripMenuItem,
+            this.تقاريرتجميعيةToolStripMenuItem});
             this.التقاريرToolStripMenuItem.Name = "التقاريرToolStripMenuItem";
             this.التقاريرToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.التقاريرToolStripMenuItem.Text = "التقارير ";
@@ -290,12 +299,28 @@
             this.كشفمساهمةجهةالعملوالخزانةToolStripMenuItem.Text = "كشف مساهمة جهة العمل والخزانة";
             this.كشفمساهمةجهةالعملوالخزانةToolStripMenuItem.Click += new System.EventHandler(this.كشفمساهمةجهةالعملوالخزانةToolStripMenuItem_Click);
             // 
-            // استمارةمرتبToolStripMenuItem
+            // استمارةالمرتباتToolStripMenuItem
             // 
-            this.استمارةمرتبToolStripMenuItem.Name = "استمارةمرتبToolStripMenuItem";
-            this.استمارةمرتبToolStripMenuItem.Size = new System.Drawing.Size(274, 24);
-            this.استمارةمرتبToolStripMenuItem.Text = "استمارة مرتب";
-            this.استمارةمرتبToolStripMenuItem.Click += new System.EventHandler(this.استمارةمرتبToolStripMenuItem_Click);
+            this.استمارةالمرتباتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.حسبالمصرفToolStripMenuItem,
+            this.حسبالشهرToolStripMenuItem});
+            this.استمارةالمرتباتToolStripMenuItem.Name = "استمارةالمرتباتToolStripMenuItem";
+            this.استمارةالمرتباتToolStripMenuItem.Size = new System.Drawing.Size(274, 24);
+            this.استمارةالمرتباتToolStripMenuItem.Text = "استمارة المرتبات";
+            // 
+            // حسبالمصرفToolStripMenuItem
+            // 
+            this.حسبالمصرفToolStripMenuItem.Name = "حسبالمصرفToolStripMenuItem";
+            this.حسبالمصرفToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.حسبالمصرفToolStripMenuItem.Text = "حسب المصرف";
+            this.حسبالمصرفToolStripMenuItem.Click += new System.EventHandler(this.حسبالمصرفToolStripMenuItem_Click);
+            // 
+            // حسبالشهرToolStripMenuItem
+            // 
+            this.حسبالشهرToolStripMenuItem.Name = "حسبالشهرToolStripMenuItem";
+            this.حسبالشهرToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.حسبالشهرToolStripMenuItem.Text = "حسب الشهر";
+            this.حسبالشهرToolStripMenuItem.Click += new System.EventHandler(this.حسبالشهرToolStripMenuItem_Click);
             // 
             // حافظةالمرتبToolStripMenuItem
             // 
@@ -331,6 +356,48 @@
             this.بطاقةالدفعالاخيرةToolStripMenuItem.Size = new System.Drawing.Size(274, 24);
             this.بطاقةالدفعالاخيرةToolStripMenuItem.Text = "بطاقة الدفع الاخير";
             this.بطاقةالدفعالاخيرةToolStripMenuItem.Click += new System.EventHandler(this.بطاقةالدفعالاخيرةToolStripMenuItem_Click);
+            // 
+            // تقاريرتجميعيةToolStripMenuItem
+            // 
+            this.تقاريرتجميعيةToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.الكشفالتحليليToolStripMenuItem1,
+            this.المصارفToolStripMenuItem1,
+            this.الضمانالاجتماعيToolStripMenuItem,
+            this.استمارةالمرتبالشهريةToolStripMenuItem,
+            this.حوفظةالمرتبToolStripMenuItem});
+            this.تقاريرتجميعيةToolStripMenuItem.Name = "تقاريرتجميعيةToolStripMenuItem";
+            this.تقاريرتجميعيةToolStripMenuItem.Size = new System.Drawing.Size(274, 24);
+            this.تقاريرتجميعيةToolStripMenuItem.Text = "تقارير تجميعية";
+            // 
+            // الكشفالتحليليToolStripMenuItem1
+            // 
+            this.الكشفالتحليليToolStripMenuItem1.Name = "الكشفالتحليليToolStripMenuItem1";
+            this.الكشفالتحليليToolStripMenuItem1.Size = new System.Drawing.Size(208, 24);
+            this.الكشفالتحليليToolStripMenuItem1.Text = "الكشف التحليلي";
+            // 
+            // المصارفToolStripMenuItem1
+            // 
+            this.المصارفToolStripMenuItem1.Name = "المصارفToolStripMenuItem1";
+            this.المصارفToolStripMenuItem1.Size = new System.Drawing.Size(208, 24);
+            this.المصارفToolStripMenuItem1.Text = "المصارف";
+            // 
+            // الضمانالاجتماعيToolStripMenuItem
+            // 
+            this.الضمانالاجتماعيToolStripMenuItem.Name = "الضمانالاجتماعيToolStripMenuItem";
+            this.الضمانالاجتماعيToolStripMenuItem.Size = new System.Drawing.Size(208, 24);
+            this.الضمانالاجتماعيToolStripMenuItem.Text = "الضمان الاجتماعي";
+            // 
+            // استمارةالمرتبالشهريةToolStripMenuItem
+            // 
+            this.استمارةالمرتبالشهريةToolStripMenuItem.Name = "استمارةالمرتبالشهريةToolStripMenuItem";
+            this.استمارةالمرتبالشهريةToolStripMenuItem.Size = new System.Drawing.Size(208, 24);
+            this.استمارةالمرتبالشهريةToolStripMenuItem.Text = "استمارة المرتب الشهرية";
+            // 
+            // حوفظةالمرتبToolStripMenuItem
+            // 
+            this.حوفظةالمرتبToolStripMenuItem.Name = "حوفظةالمرتبToolStripMenuItem";
+            this.حوفظةالمرتبToolStripMenuItem.Size = new System.Drawing.Size(208, 24);
+            this.حوفظةالمرتبToolStripMenuItem.Text = "حوفظة المرتب";
             // 
             // Form1
             // 
@@ -383,7 +450,6 @@
         private System.Windows.Forms.ToolStripMenuItem كشفالجهادToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem كشفالتضامنToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem كشفمساهمةجهةالعملوالخزانةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem استمارةمرتبToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حافظةالمرتبToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem شهادةمرتبلموظفToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem بطاقةمرتبلموظفToolStripMenuItem;
@@ -391,6 +457,15 @@
         private System.Windows.Forms.ToolStripMenuItem عرضكلالمصارفToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem بياناتالموظفToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem بطاقةالدفعالاخيرةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem استمارةالمرتباتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حسبالمصرفToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حسبالشهرToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem تقاريرتجميعيةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem الكشفالتحليليToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem المصارفToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem الضمانالاجتماعيToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem استمارةالمرتبالشهريةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حوفظةالمرتبToolStripMenuItem;
     }
 }
 

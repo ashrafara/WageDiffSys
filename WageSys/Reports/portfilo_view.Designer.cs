@@ -166,7 +166,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "عرض استمارة المرتب";
+            this.Text = "الاستمارة- حسب المصرف";
             this.Load += new System.EventHandler(this.portfilo_view_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

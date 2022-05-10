@@ -234,6 +234,12 @@
     <Compile Include="Reports\portfilo_view.Designer.cs">
       <DependentUpon>portfilo_view.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\portfio_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\portfio_report.Designer.cs">
+      <DependentUpon>portfio_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\salarycard_report.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -423,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\portfilo_view.resx">
       <DependentUpon>portfilo_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\portfio_report.resx">
+      <DependentUpon>portfio_report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\salarycard_report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

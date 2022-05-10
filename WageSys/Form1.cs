@@ -122,8 +122,7 @@ namespace WageSys
 
         private void استمارةمرتبToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Reports.portfilo_view frm = new Reports.portfilo_view();
-            frm.ShowDialog();
+            
         }
 
         private void حافظةالمرتبToolStripMenuItem_Click(object sender, EventArgs e)
@@ -179,6 +178,18 @@ namespace WageSys
         private void عرضالمرتباتToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowAll.ShowSalary db = new ShowAll.ShowSalary();
+            db.ShowDialog();
+        }
+
+        private void حسبالمصرفToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reports.portfilo_view frm = new Reports.portfilo_view();
+            frm.ShowDialog();
+        }
+
+        private void حسبالشهرToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reports.portfio_report db = new Reports.portfio_report();
             db.ShowDialog();
         }
     }
