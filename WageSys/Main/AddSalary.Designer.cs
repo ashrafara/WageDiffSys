@@ -90,6 +90,7 @@
             this.txtpaycaruse = new System.Windows.Forms.TextBox();
             this.txtpastyears = new System.Windows.Forms.TextBox();
             this.txtallowancediff = new System.Windows.Forms.TextBox();
+            this.txtservicebox = new System.Windows.Forms.TextBox();
             this.txtsancted = new System.Windows.Forms.TextBox();
             this.txtinsurancetax = new System.Windows.Forms.TextBox();
             this.txtloandiscount = new System.Windows.Forms.TextBox();
@@ -104,6 +105,7 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -111,7 +113,6 @@
             this.txttotalincometax = new System.Windows.Forms.TextBox();
             this.txtincome5tax = new System.Windows.Forms.TextBox();
             this.txtincometax = new System.Windows.Forms.TextBox();
-            this.txtservicebox = new System.Windows.Forms.TextBox();
             this.txtamountjihad = new System.Windows.Forms.TextBox();
             this.txttotalsocailtax = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -119,12 +120,13 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cboCurrency = new System.Windows.Forms.ComboBox();
             this.txtArabicWord = new System.Windows.Forms.TextBox();
             this.txtcheque = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.saltype = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -310,7 +312,6 @@
             // 
             // cbdegreeamount
             // 
-            this.cbdegreeamount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbdegreeamount.Enabled = false;
             this.cbdegreeamount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbdegreeamount.FormattingEnabled = true;
@@ -341,20 +342,36 @@
             // 
             // cbdegree
             // 
-            this.cbdegree.Enabled = false;
             this.cbdegree.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbdegree.FormattingEnabled = true;
             this.cbdegree.Location = new System.Drawing.Point(211, 20);
             this.cbdegree.Name = "cbdegree";
             this.cbdegree.Size = new System.Drawing.Size(96, 27);
             this.cbdegree.TabIndex = 8;
+            this.cbdegree.SelectedIndexChanged += new System.EventHandler(this.cbdegree_SelectedIndexChanged);
             // 
             // cbannualBounsId
             // 
-            this.cbannualBounsId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbannualBounsId.Enabled = false;
             this.cbannualBounsId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbannualBounsId.FormattingEnabled = true;
+            this.cbannualBounsId.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16"});
             this.cbannualBounsId.Location = new System.Drawing.Point(211, 65);
             this.cbannualBounsId.Name = "cbannualBounsId";
             this.cbannualBounsId.Size = new System.Drawing.Size(96, 27);
@@ -515,7 +532,7 @@
             // btnCompute
             // 
             this.btnCompute.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompute.Location = new System.Drawing.Point(1172, 108);
+            this.btnCompute.Location = new System.Drawing.Point(1189, 108);
             this.btnCompute.Name = "btnCompute";
             this.btnCompute.Size = new System.Drawing.Size(65, 28);
             this.btnCompute.TabIndex = 42;
@@ -614,11 +631,12 @@
             // 
             // txtNetSalary
             // 
-            this.txtNetSalary.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtNetSalary.BackColor = System.Drawing.SystemColors.Menu;
             this.txtNetSalary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetSalary.Location = new System.Drawing.Point(185, 61);
             this.txtNetSalary.Name = "txtNetSalary";
             this.txtNetSalary.ReadOnly = true;
+            this.txtNetSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtNetSalary.Size = new System.Drawing.Size(141, 27);
             this.txtNetSalary.TabIndex = 3;
             this.txtNetSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -830,6 +848,16 @@
             this.txtallowancediff.TabIndex = 25;
             this.txtallowancediff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtservicebox
+            // 
+            this.txtservicebox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtservicebox.Location = new System.Drawing.Point(355, 259);
+            this.txtservicebox.Name = "txtservicebox";
+            this.txtservicebox.Size = new System.Drawing.Size(88, 27);
+            this.txtservicebox.TabIndex = 23;
+            this.txtservicebox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtservicebox.TextChanged += new System.EventHandler(this.txtservicebox_TextChanged);
+            // 
             // txtsancted
             // 
             this.txtsancted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -973,6 +1001,16 @@
             this.label28.TabIndex = 0;
             this.label28.Text = "علاوة تمييز وعلاوة اخري";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(445, 261);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(104, 19);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "صندوق الخدمات";
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -1032,55 +1070,55 @@
             // 
             // txtincome10tax
             // 
+            this.txtincome10tax.BackColor = System.Drawing.SystemColors.Menu;
             this.txtincome10tax.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtincome10tax.Location = new System.Drawing.Point(324, 252);
             this.txtincome10tax.Name = "txtincome10tax";
+            this.txtincome10tax.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtincome10tax.Size = new System.Drawing.Size(117, 27);
             this.txtincome10tax.TabIndex = 28;
             this.txtincome10tax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txttotalincometax
             // 
+            this.txttotalincometax.BackColor = System.Drawing.SystemColors.Menu;
             this.txttotalincometax.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotalincometax.Location = new System.Drawing.Point(17, 242);
             this.txttotalincometax.Name = "txttotalincometax";
+            this.txttotalincometax.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txttotalincometax.Size = new System.Drawing.Size(113, 27);
             this.txttotalincometax.TabIndex = 27;
             this.txttotalincometax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtincome5tax
             // 
+            this.txtincome5tax.BackColor = System.Drawing.SystemColors.Menu;
             this.txtincome5tax.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtincome5tax.Location = new System.Drawing.Point(17, 206);
             this.txtincome5tax.Name = "txtincome5tax";
+            this.txtincome5tax.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtincome5tax.Size = new System.Drawing.Size(113, 27);
             this.txtincome5tax.TabIndex = 26;
             this.txtincome5tax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtincometax
             // 
+            this.txtincometax.BackColor = System.Drawing.SystemColors.Menu;
             this.txtincometax.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtincometax.Location = new System.Drawing.Point(324, 217);
             this.txtincometax.Name = "txtincometax";
+            this.txtincometax.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtincometax.Size = new System.Drawing.Size(117, 27);
             this.txtincometax.TabIndex = 25;
             this.txtincometax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtservicebox
-            // 
-            this.txtservicebox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtservicebox.Location = new System.Drawing.Point(355, 259);
-            this.txtservicebox.Name = "txtservicebox";
-            this.txtservicebox.Size = new System.Drawing.Size(88, 27);
-            this.txtservicebox.TabIndex = 23;
-            this.txtservicebox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtservicebox.TextChanged += new System.EventHandler(this.txtservicebox_TextChanged);
-            // 
             // txtamountjihad
             // 
+            this.txtamountjihad.BackColor = System.Drawing.SystemColors.Menu;
             this.txtamountjihad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtamountjihad.Location = new System.Drawing.Point(324, 147);
             this.txtamountjihad.Name = "txtamountjihad";
+            this.txtamountjihad.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtamountjihad.Size = new System.Drawing.Size(117, 27);
             this.txtamountjihad.TabIndex = 22;
             this.txtamountjihad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1145,16 +1183,6 @@
             this.label33.TabIndex = 0;
             this.label33.Text = "المبلغ الخاضع لضريبة الدخل";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(445, 261);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(104, 19);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "صندوق الخدمات";
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -1203,12 +1231,37 @@
             this.txtcheque.TabIndex = 56;
             this.txtcheque.Visible = false;
             // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Navy;
+            this.label43.Location = new System.Drawing.Point(1012, 55);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(35, 19);
+            this.label43.TabIndex = 57;
+            this.label43.Text = "النوع";
+            // 
+            // saltype
+            // 
+            this.saltype.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saltype.FormattingEnabled = true;
+            this.saltype.Items.AddRange(new object[] {
+            "مرتب مصروف",
+            "مرتب مستحق"});
+            this.saltype.Location = new System.Drawing.Point(1053, 56);
+            this.saltype.Name = "saltype";
+            this.saltype.Size = new System.Drawing.Size(161, 26);
+            this.saltype.TabIndex = 58;
+            // 
             // AddSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1278, 642);
+            this.Controls.Add(this.saltype);
+            this.Controls.Add(this.label43);
             this.Controls.Add(this.txtcheque);
             this.Controls.Add(this.cboCurrency);
             this.Controls.Add(this.txtArabicWord);
@@ -1344,5 +1397,7 @@
         private System.Windows.Forms.TextBox txtcheque;
         private System.Windows.Forms.TextBox txthouseloan;
         private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.ComboBox saltype;
     }
 }

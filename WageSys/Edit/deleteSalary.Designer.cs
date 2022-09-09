@@ -62,6 +62,8 @@
             this.label33 = new System.Windows.Forms.Label();
             this.txtTotalTaxes = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txthouseloan = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtpaycaruse = new System.Windows.Forms.TextBox();
             this.txtpastyears = new System.Windows.Forms.TextBox();
             this.txtallowancediff = new System.Windows.Forms.TextBox();
@@ -127,8 +129,8 @@
             this.txtcheque = new System.Windows.Forms.TextBox();
             this.cboCurrency = new System.Windows.Forms.ComboBox();
             this.txtArabicWord = new System.Windows.Forms.TextBox();
-            this.txthouseloan = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.saltype = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -555,6 +557,26 @@
             this.groupBox10.TabIndex = 84;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "المدخلات";
+            // 
+            // txthouseloan
+            // 
+            this.txthouseloan.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthouseloan.Location = new System.Drawing.Point(227, 108);
+            this.txthouseloan.Name = "txthouseloan";
+            this.txthouseloan.Size = new System.Drawing.Size(74, 21);
+            this.txthouseloan.TabIndex = 30;
+            this.txthouseloan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Navy;
+            this.label10.Location = new System.Drawing.Point(307, 112);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "القرض السكني";
             // 
             // txtpaycaruse
             // 
@@ -1247,25 +1269,27 @@
             this.txtArabicWord.Size = new System.Drawing.Size(1081, 33);
             this.txtArabicWord.TabIndex = 87;
             // 
-            // txthouseloan
+            // saltype
             // 
-            this.txthouseloan.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthouseloan.Location = new System.Drawing.Point(227, 108);
-            this.txthouseloan.Name = "txthouseloan";
-            this.txthouseloan.Size = new System.Drawing.Size(74, 21);
-            this.txthouseloan.TabIndex = 30;
-            this.txthouseloan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.saltype.FormattingEnabled = true;
+            this.saltype.Items.AddRange(new object[] {
+            "مرتب مصروف",
+            "مرتب مستحق"});
+            this.saltype.Location = new System.Drawing.Point(12, 179);
+            this.saltype.Name = "saltype";
+            this.saltype.Size = new System.Drawing.Size(104, 21);
+            this.saltype.TabIndex = 91;
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(307, 112);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "القرض السكني";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Navy;
+            this.label11.Location = new System.Drawing.Point(15, 154);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 19);
+            this.label11.TabIndex = 90;
+            this.label11.Text = "النوع";
             // 
             // deleteSalary
             // 
@@ -1273,6 +1297,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1387, 734);
+            this.Controls.Add(this.saltype);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.txtcheque);
             this.Controls.Add(this.cboCurrency);
             this.Controls.Add(this.txtArabicWord);
@@ -1412,5 +1438,7 @@
         private System.Windows.Forms.TextBox txtArabicWord;
         private System.Windows.Forms.TextBox txthouseloan;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox saltype;
+        private System.Windows.Forms.Label label11;
     }
 }

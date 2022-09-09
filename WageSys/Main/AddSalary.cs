@@ -39,6 +39,27 @@ namespace WageSys.Main
             InitializeComponent();
 
 
+            var deg = from p in db.EmployeeDegreees
+                      select new
+                      {
+                           p.degreeId,
+                           p.degreeNumber,
+                           p.degreeAmount,
+                           p.bounsNumber
+                      };
+            cbBouns.DataSource = deg.ToList();
+            cbBouns.DisplayMember = "bounsNumber";
+            cbBouns.ValueMember = "degreeId";
+
+            cbdegree.DataSource = deg.ToList();
+            cbdegree.DisplayMember = "degreeNumber";
+            cbdegree.ValueMember = "degreeId";
+
+            cbdegreeamount.DataSource = deg.ToList();
+            cbdegreeamount.DisplayMember = "degreeAmount";
+            cbdegreeamount.ValueMember = "degreeId";
+
+
             var emplpy = (from c in db.Employees
                           join s in db.EmployeeDegreees on c.degreeId equals s.degreeId
                           select new
@@ -47,35 +68,35 @@ namespace WageSys.Main
                               c.EmployeeDegreee.degreeNumber,
                               c.emlpoyeeBouns,
                               c.employeeState,
-                              s.bounsNumber,
-                              s.degreeAmount,
-                              s.degreeId,
+                              //s.bounsNumber,
+                              //s.degreeAmount,
+                              //s.degreeId,
                               c.employeeId
                           }).ToList();
             cbemployeeId.DataSource = emplpy.ToList();
             cbemployeeId.DisplayMember = "employeeName";
             cbemployeeId.ValueMember = "employeeId";
 
-            cbBouns.DataSource = emplpy.ToList();
-            cbBouns.DisplayMember = "emlpoyeeBouns";
-            cbBouns.ValueMember = "employeeId";
+            //cbBouns.DataSource = emplpy.ToList();
+            //cbBouns.DisplayMember = "emlpoyeeBouns";
+            //cbBouns.ValueMember = "employeeId";
 
-            cbdegree.DataSource = emplpy.ToList();
-            cbdegree.DisplayMember = "degreeNumber";
-            cbdegree.ValueMember = "degreeId";
+            //cbdegree.DataSource = emplpy.ToList();
+            //cbdegree.DisplayMember = "degreeNumber";
+            //cbdegree.ValueMember = "degreeId";
 
             cbemploymentType.DataSource = emplpy.ToList();
             cbemploymentType.DisplayMember = "employeeState";
             cbemploymentType.ValueMember = "employeeId";
 
-            cbannualBounsId.DataSource = emplpy.ToList();
-            cbannualBounsId.DisplayMember = "bounsNumber";
-            cbannualBounsId.ValueMember = "degreeId";
+            //cbannualBounsId.DataSource = emplpy.ToList();
+            //cbannualBounsId.DisplayMember = "bounsNumber";
+            //cbannualBounsId.ValueMember = "degreeId";
 
 
-            cbdegreeamount.DataSource = emplpy.ToList();
-            cbdegreeamount.DisplayMember = "degreeAmount";
-            cbdegreeamount.ValueMember = "degreeId";
+            //cbdegreeamount.DataSource = emplpy.ToList();
+            //cbdegreeamount.DisplayMember = "degreeAmount";
+            //cbdegreeamount.ValueMember = "degreeId";
 
         }
         private void ClearTextBoxes()
@@ -109,9 +130,9 @@ namespace WageSys.Main
             dynamic degreeAmount = cbdegreeamount.SelectedValue;
 
 
-            if (txtrmonth.Text =="" && txtyear.Text =="")
+            if (txtrmonth.Text == "" || txtyear.Text == "" || saltype.SelectedItem == null || cbBouns.SelectedItem== null)
             {
-                MessageBox.Show("الرجاء ادخال التاريخ والسنة");
+                MessageBox.Show(" الرجاء ادخال التاريخ والسنة والنوع");
             }
             else
             {
@@ -157,9 +178,10 @@ namespace WageSys.Main
                     salaryDate = Convert.ToDateTime(dateTimePicker1.Text),
                     salaryTotalContribution = double.Parse(txtsalarysalaryWorkContribution.Text) + double.Parse(txtsalaryTreasurContribution.Text),
                     paycaruse = string.IsNullOrEmpty(txtpaycaruse.Text) ? (double?)0 : double.Parse(txtpaycaruse.Text),
-                    cheaqueNum= string.IsNullOrEmpty(txtcheque.Text) ? (int?)0 : int.Parse(txtcheque.Text),
+                    cheaqueNum = string.IsNullOrEmpty(txtcheque.Text) ? (int?)0 : int.Parse(txtcheque.Text),
                     houseloan = string.IsNullOrEmpty(txthouseloan.Text) ? (double?)0 : double.Parse(txthouseloan.Text),
-                    salaryletter= txtArabicWord.Text
+                    salaryletter = txtArabicWord.Text,
+                    saltype = saltype.SelectedItem.ToString()
 
                 };
                     db.SalaryLogs.Add(salary);
@@ -671,9 +693,9 @@ namespace WageSys.Main
         private void cbemployeeId_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbannualBounsId.SelectedItem = cbemployeeId.SelectedItem;
-            cbBouns.SelectedItem = cbemployeeId.SelectedItem;
-            cbdegreeamount.SelectedItem = cbemployeeId.SelectedItem;
-            cbdegree.SelectedItem = cbemployeeId.SelectedItem;
+            //cbBouns.SelectedItem = cbemployeeId.SelectedItem;
+            //cbdegreeamount.SelectedItem = cbemployeeId.SelectedItem;
+            //cbdegree.SelectedItem = cbemployeeId.SelectedItem;
             cbemploymentType.SelectedItem = cbemployeeId.SelectedItem;
         }
 
@@ -762,6 +784,13 @@ namespace WageSys.Main
 
         private void txtservicebox_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void cbdegree_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbBouns.SelectedItem = cbdegree.SelectedItem;
+            cbdegreeamount.SelectedItem = cbdegree.SelectedItem;
 
         }
     }

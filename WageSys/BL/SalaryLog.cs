@@ -95,9 +95,12 @@ namespace WageSys
         public double? addsecondement { get; set; }
 
         public double? houseloan { get; set; }
-    
+
         [StringLength(250)]
         public string salaryletter { get; set; }
+
+        [StringLength(50)]
+        public string saltype { get; set; }
 
         public virtual Employee Employee { get; set; }
     }

@@ -66,6 +66,7 @@ namespace WageSys.Edit
                           employeeId = p.Employee.employeeName,
                           salaray_year = p.salarayyear == null ? "" : p.salarayyear,
                           salary_Month = p.salaryMonth == null ? "" : p.salaryMonth,
+                          sal_type = p.saltype,
                           allowance_Delay = p.allowanceDelay == null ? 0 : p.allowanceDelay,
                           committee_Amount = p.committeeAmount == null ? 0 : p.committeeAmount,
                           unemp_Gift = p.unempGift == null ? 0 : p.unempGift,
@@ -137,39 +138,40 @@ namespace WageSys.Edit
                 cbemployeeId.Text = row.Cells[1].Value.ToString();
                 txtyear.Text = row.Cells[2].Value.ToString();
                 txtrmonth.Text = row.Cells[3].Value.ToString();
-                txtallowanceDelay.Text = row.Cells[4].Value.ToString();
-                txtcommittee.Text = row.Cells[5].Value.ToString();
-                txtunempGift.Text = row.Cells[6].Value.ToString();
-                txtothergift.Text = row.Cells[7].Value.ToString();
-                txtinsurancetax.Text = row.Cells[8].Value.ToString();
-                txtloandiscount.Text = row.Cells[9].Value.ToString();
-                txtsancted.Text = row.Cells[10].Value.ToString();
-                txtexempttax.Text = row.Cells[11].Value.ToString();
-                txtallowancediff.Text = row.Cells[12].Value.ToString();
-                txtpastyears.Text = row.Cells[13].Value.ToString();
-                txtpaycaruse.Text = row.Cells[14].Value.ToString();
-                txtBasicSalary.Text = row.Cells[15].Value.ToString();
-                txtallowanceSecondment.Text = row.Cells[16].Value.ToString();
-                txtaddSecond.Text = row.Cells[17].Value.ToString();
-                txtAbsentDay.Text= row.Cells[18].Value.ToString();
-                txtabsentamount.Text= row.Cells[19].Value.ToString();
+                saltype.Text= row.Cells[4].Value.ToString();
+                txtallowanceDelay.Text = row.Cells[5].Value.ToString();
+                txtcommittee.Text = row.Cells[6].Value.ToString();
+                txtunempGift.Text = row.Cells[7].Value.ToString();
+                txtothergift.Text = row.Cells[8].Value.ToString();
+                txtinsurancetax.Text = row.Cells[9].Value.ToString();
+                txtloandiscount.Text = row.Cells[10].Value.ToString();
+                txtsancted.Text = row.Cells[11].Value.ToString();
+                txtexempttax.Text = row.Cells[12].Value.ToString();
+                txtallowancediff.Text = row.Cells[13].Value.ToString();
+                txtpastyears.Text = row.Cells[14].Value.ToString();
+                txtpaycaruse.Text = row.Cells[15].Value.ToString();
+                txtBasicSalary.Text = row.Cells[16].Value.ToString();
+                txtallowanceSecondment.Text = row.Cells[17].Value.ToString();
+                txtaddSecond.Text = row.Cells[18].Value.ToString();
+                txtAbsentDay.Text= row.Cells[19].Value.ToString();
+                txtabsentamount.Text= row.Cells[20].Value.ToString();
 
-                txtTotalSalary.Text = row.Cells[18].Value.ToString();
-                txtSocialSecurityTax.Text = row.Cells[18].Value.ToString();
-                txtsalarysalaryWorkContribution.Text = row.Cells[19].Value.ToString();
-                txtsalaryTreasurContribution.Text = row.Cells[20].Value.ToString();
-                txttotalsocailtax.Text = row.Cells[21].Value.ToString();
-                txtsolidarityTax.Text = row.Cells[22].Value.ToString();
-                txtamountjihad.Text = row.Cells[23].Value.ToString();
-                txtJihadTax.Text = row.Cells[24].Value.ToString();
-                txtservicebox.Text = row.Cells[25].Value.ToString();
-                txtincometax.Text = row.Cells[26].Value.ToString();
-                txtincome5tax.Text = row.Cells[27].Value.ToString();
-                txtincome10tax.Text = row.Cells[28].Value.ToString();
-                txttotalincometax.Text = row.Cells[29].Value.ToString();
-                txtTotalAllowanace.Text = row.Cells[30].Value.ToString();
-                txtTotalTaxes.Text = row.Cells[31].Value.ToString();
-                txtNetSalary.Text = row.Cells[32].Value.ToString();
+                txtTotalSalary.Text = row.Cells[21].Value.ToString();
+                txtSocialSecurityTax.Text = row.Cells[22].Value.ToString();
+                txtsalarysalaryWorkContribution.Text = row.Cells[23].Value.ToString();
+                txtsalaryTreasurContribution.Text = row.Cells[24].Value.ToString();
+                txttotalsocailtax.Text = row.Cells[25].Value.ToString();
+                txtsolidarityTax.Text = row.Cells[26].Value.ToString();
+                txtamountjihad.Text = row.Cells[27].Value.ToString();
+                txtJihadTax.Text = row.Cells[28].Value.ToString();
+                txtservicebox.Text = row.Cells[29].Value.ToString();
+                txtincometax.Text = row.Cells[30].Value.ToString();
+                txtincome5tax.Text = row.Cells[31].Value.ToString();
+                txtincome10tax.Text = row.Cells[32].Value.ToString();
+                txttotalincometax.Text = row.Cells[33].Value.ToString();
+                txtTotalAllowanace.Text = row.Cells[34].Value.ToString();
+                txtTotalTaxes.Text = row.Cells[35].Value.ToString();
+                txtNetSalary.Text = row.Cells[36].Value.ToString();
 
             }
 
@@ -246,7 +248,8 @@ namespace WageSys.Edit
                         paycaruse = string.IsNullOrEmpty(txtpaycaruse.Text) ? (double?)0 : double.Parse(txtpaycaruse.Text),
                         cheaqueNum = string.IsNullOrEmpty(txtcheque.Text) ? (int?)0 : int.Parse(txtcheque.Text),
                         houseloan = string.IsNullOrEmpty(txthouseloan.Text) ? (double?)0 : double.Parse(txthouseloan.Text),
-                        salaryletter = txtArabicWord.Text
+                        salaryletter = txtArabicWord.Text, 
+                        saltype= saltype.SelectedItem.ToString()
                     };
                     db.SalaryLogs.AddOrUpdate(salary);
                     db.SaveChanges();
